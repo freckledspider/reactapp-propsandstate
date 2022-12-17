@@ -1,7 +1,9 @@
 import {useState} from "react"
 import Button from "./Button"
+import Display from "./Display"
 
 function Counter (props){
+  console.log("counter rendered")
       // let count = 0
   const [count, setCount] = useState(0)
   console.log(count)
@@ -17,7 +19,7 @@ function Counter (props){
 
   return (
     <div className="App">
-      <h1>{count}</h1>
+      <Display displayValue={count}/>
       <Button label="+1" click={countUp}/>
       <Button label="-1" click={countDown}/>
     </div>
