@@ -1,13 +1,18 @@
 function Button(props){
-    console.log("Button " + props.label)
-    return <button onClick={props.click} style={{
+
+    const ButtonStyle = {
         border: "none",
         padding: "6px",
         fontSize: "1.2em",
-        backgroundColor: "blue",
+        backgroundColor: props.bg,
         color: "white",
         margin: "3px"
-    }}>{props.label}</button>
+    }
+    
+    console.log("Button " + props.label)
+    return <button onClick={props.click} style={ButtonStyle}>
+        {props.label}
+        </button>
 }
 
 export default Button
