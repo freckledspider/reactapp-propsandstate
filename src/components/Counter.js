@@ -11,11 +11,15 @@ function Counter (props){
     setCount(count+1)
   }
 
+  function countDown(){
+    setCount(count-1)
+  }
+
   return (
     <div className="App">
       <h1>{count}</h1>
-      <button onClick={countUp}>Add One</button>
       <Button label="+1" click={countUp}/>
+      <Button label="-1" click={countDown}/>
     </div>
   );
 }
