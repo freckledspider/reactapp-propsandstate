@@ -1,13 +1,16 @@
+import Card from "./Card";
+
 function RenderArray(props) {
-    return <>
-    {props.data.map((item, index) => {
-        return <div>
-            <img src={item.img} alt={item.titel} />
-            <h2>{item.title}</h2>
-            <p>{item.text}</p>
-        </div>
-    })}
+//   const arrayOfJSX = [<h1>1</h1>, <h1>2</h1>, <h1>3</h1>];
+
+  return (
+    <>
+    <div className="card-container">
+      {/* {arrayOfJSX} */}
+      {props.data.map((item, index) => <Card item={item} index={index} key={index}/>)}
+      </div>
     </>
+  );
 }
 
-export default RenderArray
+export default RenderArray;
